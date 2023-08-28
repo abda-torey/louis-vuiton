@@ -7,10 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        body: [
+          "Louis Vuitton Web",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+      boxShadow: {
+        border: "inset  0 0 0 1px #fff",
+        "link-underline": "0 1px 0 rgba(0,0,0, .6)",
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "video-gradient": "linear-gradient(0deg, #000 0%, transparent 100%)",
       },
     },
   },

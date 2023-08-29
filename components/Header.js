@@ -4,6 +4,7 @@ import {
   Bars3Icon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
+  UserCircleIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import classNames from "classnames";
@@ -11,29 +12,42 @@ import classNames from "classnames";
 const Header = () => {
   return (
     <header
-      className="fixed top-0 left-0 w-full h-[88px] flex items-center z-10  hover:bg-white
-     transition-all duration-[.4s] ease-in-out group
-    "
+      className={classNames(
+        "fixed top-0 left-0 w-full h-[56px] flex items-center z-10  hover:bg-white transition-all duration-[.4s] ease-in-out group",
+        "md:h-[88px]"
+      )}
     >
-      <div className="flex flex-1 items-center justify-between px-[36px] group-hover:text-black">
+        {/* header inner */}
+      <div className={classNames(
+        "flex flex-1 items-center justify-between px-[36px] group-hover:text-black",
+        "md:px-[36px]"
+      )}>
         {/* header left */}
-        <div className="flex items-center gap-[30px]">
+        <div className={classNames(
+            "flex items-center gap-[16px]",
+            "gap-[30px]"
+        )}>
           {/* menu */}
           <button type="button" className="flex items-center gap-4">
             <Bars3Icon className="h-6 w-6" />
-            <span>Menu</span>
+            <span className={classNames(
+                "hidden","md:inline-block"
+            )}>Menu</span>
           </button>
           {/* search */}
           <button type="button" className="flex items-center gap-4">
             <MagnifyingGlassIcon className="h-6 w-6" />
-            <span>Search</span>
+            <span className={classNames(
+                "hidden","md:inline-block"
+            )}>Search</span>
           </button>
         </div>
         {/* header center */}
         <div
-          className="absolute max-w-[227px] w-full left-1/2 top-1/2
-         -translate-x-1/2 -translate-y-1/2
-        "
+          className={classNames(
+            "absolute max-w-[146px] w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+            "md:max-w-[227px]"
+          )}
         >
           <Link href="/">
             <svg
@@ -55,11 +69,15 @@ const Header = () => {
         </div>
         {/* menu right */}
         <div className="flex items-center gap-[30px]">
-          <div className="flex items-center gap-[30px]">
+          <div className={classNames(
+            "hidden items-center gap-[30px]",
+            "md:flex"
+            
+          )}>
             <button>Wishlist</button>
             <button>My LV</button>
           </div>
-
+           
           {/* Cart */}
 
           <button className="flex items-start">
